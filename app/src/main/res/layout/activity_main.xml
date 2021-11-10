@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2e6ff"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/main_calendar"
+        android:layout_width="413dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lt16400639_quantized"
+        tools:ignore="ContentDescription,MissingConstraints"
+        tools:layout_editor_absoluteX="-3dp" />
+
+    <Button
+        android:id="@+id/resetbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6c83ad"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322"
+        tools:ignore="MissingConstraints" />
+
+    <ToggleButton
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6c83ad"
+        android:text="@string/start"
+        android:textColor="@color/btn_start"
+        android:textOff="@string/start"
+        android:textOn="@string/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/movement"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972"
+        app:srcCompat="@drawable/dumbbell"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/BMI"
+        android:layout_width="73dp"
+        android:layout_height="74dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/bmi"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.972"
+        app:srcCompat="@drawable/map"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/stepcounter2"
+        android:layout_width="266dp"
+        android:layout_height="274dp"
+        android:layout_marginBottom="508dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@raw/step"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
+    <ImageView
+        android:id="@+id/stepcounter"
+        android:layout_width="266dp"
+        android:layout_height="274dp"
+        android:layout_marginBottom="508dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/earth"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/todo" />
+
+
+    <TextView
+        android:id="@+id/sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="#FFFF"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="291dp"
+        android:backgroundTint="@color/backGround"
+        app:layout_constraintBottom_toTopOf="@+id/main_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stepcounter2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_settings_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#222222</color>
+    <color name="input_register_bg">#ffffff</color>
+    <color name="input_register_hint">#999999</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="check_button">#26ae90</color>
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#d2e6ff</color>
+    <color name="bg_main">#428bca</color>
+    <color name="btn_start">#FFFF</color>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FF7043</color>
+    <color name="colorAccent">#FFAB40</color>
+    <color name="colorGray">#8C8C8C</color>
+    <color name="btnBackgroung">#6c83ad</color>
+    <color name="btnText">#FFFF</color>
+    <color name="backGround">#d2e6ff</color>
+</resources>

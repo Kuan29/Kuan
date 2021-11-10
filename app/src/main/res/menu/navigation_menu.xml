@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_pushup"
+        android:title="@string/menu_movement_a" />
+    <item
+        android:id="@+id/nav_situp"
+        android:title="@string/menu_movement_b"/>
+    <item
+        android:id="@+id/nav_burpee"
+        android:title="@string/menu_movement_c"/>
+    <item
+        android:id="@+id/nav_squat"
+        android:title="@string/menu_movement_d" />
+    <item
+        android:id="@+id/nav_lunge"
+        android:title="@string/menu_movement_e"/>
+    <item
+        android:id="@+id/nav_crunch"
+        android:title="@string/menu_movement_f"/>
+    <item
+        android:id="@+id/nav_mountainclimbing"
+        android:title="@string/menu_movement_g"/>
+
+</menu>
