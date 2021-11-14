@@ -78,17 +78,26 @@
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/activity_main.xml" value="0.16590678824721378" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/activity_movement.xml" value="0.16590678824721378" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/activity_request.xml" value="0.22395833333333334" />
-        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/activity_setting.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/activity_setting.xml" value="0.33" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/appbar.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/bmi.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/bmi_result.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/bmi_result_1.xml" value="0.5" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/bmi_result_1.xml" value="0.33" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/fragment_move_1.xml" value="0.2046875" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/fragment_move_2.xml" value="0.24322916666666666" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/fragment_move_3.xml" value="0.16590678824721378" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/fragment_move_6.xml" value="0.2046875" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/fragment_move_7.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/korean_weight.xml" value="0.23697916666666666" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/layout_navigation_header.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/movement_2.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/movement_3.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/movement_4.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/movement_5.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/movement_7.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/stacked_bar_chart.xml" value="0.2" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/standard_weight.xml" value="0.21557971014492755" />
+        <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/standard_weight2.xml" value="0.23697916666666666" />
         <entry key="..\:/Users/wcn06/AndroidStudioProjects/kotiln_1/app/src/main/res/layout/test.xml" value="0.36614583333333334" />
       </map>
     </option>

@@ -40,6 +40,7 @@ class bmiResultActivity : AppCompatActivity(){
         bmigraph.setOnClickListener {
             val intent = Intent(this,bmiResultActivity1::class.java)
             intent.putExtra("bmigraph",bmi)
+            intent.putExtra("bmiresult",resultText)
             startActivity(intent)
         }
     }

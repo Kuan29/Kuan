@@ -24,6 +24,8 @@
         <activity android:name=".bmiResultActivity"></activity>
         <activity android:name=".bmiResultActivity1"></activity>
         <activity android:name=".SettingActivity" ></activity>
+        <activity android:name=".standard_weight" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".standard_weight2" android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".Movement" ></activity>
         <activity android:name=".Calendar"></activity>
     </application>

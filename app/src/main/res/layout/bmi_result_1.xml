@@ -39,35 +39,50 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="178dp"
-        android:layout_height="47dp"
+        android:id="@+id/standard_weight"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/btnBackgroung"
-        android:text="한국 남여 표준 채중표"
+        android:onClick="mOnPopupClick"
+        android:text="국제 표준체중"
         android:textColor="@color/btnText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.628"
+        tools:ignore="MissingConstraints,OnClick" />
+
+    <Button
+        android:id="@+id/korean_weight"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/btnBackgroung"
+        android:onClick="mOnPopupClick2"
+        android:text="한국 표준체중"
+        android:textColor="@color/btnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628"
+        tools:ignore="MissingConstraints,OnClick" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:text="그래프로 분석하기"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:backgroundTint="@color/btnBackgroung"
+        android:text="그래프로 분석"
         android:textColor="@color/btnText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781"
+        app:layout_constraintVertical_bias="0.701"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
@@ -105,6 +120,16 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="368dp"
+        tools:ignore="MissingConstraints">
+
+    </LinearLayout>
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="326dp"
@@ -122,6 +147,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.39"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resultTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginRight="173dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="과체중" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
