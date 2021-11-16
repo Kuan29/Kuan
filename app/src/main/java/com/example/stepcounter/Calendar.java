@@ -40,6 +40,7 @@ public class Calendar extends AppCompatActivity {
         textView2=findViewById(R.id.textView2);
         textView3=findViewById(R.id.textView3);
         contextEditText=findViewById(R.id.contextEditText);
+
         //로그인 및 회원가입 엑티비티에서 이름을 받아옴
         Intent intent=getIntent();
         String name=intent.getStringExtra("join_name");
@@ -75,7 +76,6 @@ public class Calendar extends AppCompatActivity {
                 del_Btn.setVisibility(View.VISIBLE);
                 contextEditText.setVisibility(View.INVISIBLE);
                 textView2.setVisibility(View.VISIBLE);
-
             }
         });
     }

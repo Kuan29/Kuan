@@ -32,6 +32,11 @@ class bmiResultActivity1 : AppCompatActivity() {
         val resultStringTextView: TextView = findViewById(R.id.resultTextView2)
         resultStringTextView.text = bmiresult
 
+        graphanalysis.setOnClickListener {
+            val intent = Intent(this,CombinedChartActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
 

@@ -8,17 +8,30 @@
     tools:context=".MainActivity">
 
 
-    <ImageButton
-        android:id="@+id/main_calendar"
-        android:layout_width="413dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/todo"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lt16400639_quantized"
-        tools:ignore="ContentDescription,MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="186dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/movement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetbutton"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/main_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:contentDescription="@string/todo"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/lt16400639_quantized"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="326dp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/resetbutton"
@@ -154,11 +167,12 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="291dp"
         android:backgroundTint="@color/backGround"
-        app:layout_constraintBottom_toTopOf="@+id/main_calendar"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stepcounter2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_settings_24"
         tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

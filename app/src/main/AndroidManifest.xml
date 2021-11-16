@@ -26,6 +26,7 @@
         <activity android:name=".SettingActivity" ></activity>
         <activity android:name=".standard_weight" android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".standard_weight2" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".CombinedChartActivity"/>
         <activity android:name=".Movement" ></activity>
         <activity android:name=".Calendar"></activity>
     </application>

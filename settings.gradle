@@ -3,5 +3,4 @@ rootProject.name = "stepcounter"
 include ':app'
 
 
-
-
+include ':mpchartlib'
