@@ -8,37 +8,37 @@
     <fragment
         android:id="@+id/nav_pushup"
         android:name="com.example.stepcounter.Movement_1"
-        android:label="Push-up"
+        android:label="팔굽혀펴기"
         tools:layout="@layout/fragment_move_1" />
     <fragment
         android:id="@+id/nav_situp"
         android:name="com.example.stepcounter.Movement_2"
-        android:label="Sit-up"
+        android:label="윗몸일으키기"
         tools:layout="@layout/fragment_move_2" />
     <fragment
         android:id="@+id/nav_burpee"
         android:name="com.example.stepcounter.Movement_3"
-        android:label="Burpee"
+        android:label="버피"
         tools:layout="@layout/fragment_move_3"/>
     <fragment
         android:id="@+id/nav_squat"
         android:name="com.example.stepcounter.Movement_4"
-        android:label="Squat"
+        android:label="스쿼트"
         tools:layout="@layout/fragment_move_4"/>
     <fragment
         android:id="@+id/nav_lunge"
         android:name="com.example.stepcounter.Movement_5"
-        android:label="Lunge"
+        android:label="런지"
         tools:layout="@layout/fragment_move_5"/>
     <fragment
         android:id="@+id/nav_crunch"
         android:name="com.example.stepcounter.Movement_6"
-        android:label="Crunch"
+        android:label="크런치"
         tools:layout="@layout/fragment_move_6"/>
     <fragment
         android:id="@+id/nav_mountainclimbing"
         android:name="com.example.stepcounter.Movement_7"
-        android:label="Mountain Climbing"
+        android:label="마운틴 클라이밍"
         tools:layout="@layout/fragment_move_7"/>
 
 </navigation>

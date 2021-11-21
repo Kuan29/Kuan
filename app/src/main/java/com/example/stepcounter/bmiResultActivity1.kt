@@ -34,6 +34,7 @@ class bmiResultActivity1 : AppCompatActivity() {
 
         graphanalysis.setOnClickListener {
             val intent = Intent(this,CombinedChartActivity::class.java)
+            intent.putExtra("bmigraph1",bmigraph1)
             startActivity(intent)
         }
 

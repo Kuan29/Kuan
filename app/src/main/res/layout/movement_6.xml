@@ -9,21 +9,6 @@
     <!--suppress AndroidUnknownAttribute -->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="크런치"
-        android:textColor="#000"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
-    <TextView
         android:id="@+id/textView13"
         android:layout_width="91dp"
         android:layout_height="15dp"
@@ -142,13 +127,15 @@
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/crunch"
         android:layout_width="372dp"
         android:layout_height="254dp"
+        android:layout_marginTop="105dp"
         android:layout_marginBottom="372dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription,MissingConstraints"
         tools:srcCompat="@tools:sample/avatars" />
 

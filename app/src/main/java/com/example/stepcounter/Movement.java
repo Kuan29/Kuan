@@ -31,7 +31,6 @@ public class Movement extends AppCompatActivity {
             // start에 지정된 Drawer 열기
             drawerLayout.openDrawer(GravityCompat.START);
             String nav_name = getIntent().getStringExtra("join_name");
-            Nav_join_name.setText(nav_name+"님");
 
         });
 

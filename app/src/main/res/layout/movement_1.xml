@@ -10,44 +10,23 @@
     android:background="#d2e6ff">
 
 
-
-
-
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="372dp"
-            android:layout_height="254dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
-            android:layout_marginBottom="372dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:srcCompat="@tools:sample/avatars" />
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="46dp"
-        android:gravity="center_horizontal"
-        android:text="팔굽혀펴기"
-        android:textColor="#000"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+    <ImageView
+        android:id="@+id/pushup"
+        android:layout_width="372dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="372dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
             android:id="@+id/textView6"

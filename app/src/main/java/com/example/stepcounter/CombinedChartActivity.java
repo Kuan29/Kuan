@@ -2,6 +2,7 @@
 package com.example.stepcounter;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -27,16 +28,17 @@ public class CombinedChartActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        Intent graphintent = getIntent();
+        Double bmigraph1 = graphintent.getDoubleExtra("bmigraph1",0.0);
+
         LineChart chart = findViewById(R.id.linechart);
 
         ArrayList<Entry> values = new ArrayList<>();
-
         for (int i = 0; i < 10; i++) {
 
             float val = (float) (Math.random() * 10);
             values.add(new Entry(i, (int) val));
         }
-
         LineDataSet set1;
         set1 = new LineDataSet(values, "DataSet 1");
 
@@ -49,9 +51,9 @@ public class CombinedChartActivity extends AppCompatActivity {
         // black lines and points
         set1.setColor(Color.BLACK);
         set1.setCircleColor(Color.BLACK);
-
         // set data
         chart.setData(data);
     }
+    
 
 }

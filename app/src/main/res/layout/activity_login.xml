@@ -29,12 +29,12 @@
         android:paddingRight="20dp">
 
         <EditText
-            android:id="@+id/login_email"
+            android:id="@+id/login_username"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/input_register_bg"
-            android:hint="@string/hint_email"
+            android:hint="Username"
             android:inputType="textCapWords"
             android:padding="10dp"
             android:textColor="@color/input_register"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@color/input_register_bg"
-            android:hint="@string/hint_password"
+            android:hint="Password"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="@color/input_register"

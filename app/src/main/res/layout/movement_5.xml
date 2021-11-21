@@ -12,24 +12,6 @@
     <!--suppress AndroidUnknownAttribute -->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="640dp"
-        android:gravity="center_horizontal"
-        android:text="런지"
-        android:textColor="#000"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="391dp"
         android:layout_height="46dp"
@@ -124,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/lunge"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText,MissingConstraints" />
 
@@ -174,14 +156,16 @@
         tools:ignore="HardcodedText,MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/lunge"
         android:layout_width="372dp"
         android:layout_height="254dp"
+        android:layout_marginTop="105dp"
         android:layout_marginBottom="372dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription,MissingConstraints"
         tools:srcCompat="@tools:sample/avatars" />
 

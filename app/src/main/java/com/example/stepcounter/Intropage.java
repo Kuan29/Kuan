@@ -7,6 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.stepcounter.database.LoginActivity;
+
 public class Intropage extends AppCompatActivity {
 
 
@@ -22,7 +24,7 @@ public class Intropage extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Intropage.this, MainActivity.class);
+                Intent intent = new Intent(Intropage.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

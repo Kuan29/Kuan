@@ -1,4 +1,5 @@
 package com.example.stepcounter;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
@@ -8,7 +9,9 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -26,14 +29,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private SensorManager sensorManager;
     private  Sensor stepDetectorSensor;
     private int mStepDetector;
+    private int msteps;
     ImageView imageView;
-    public static final int BMI_CODE_MENU = 103;
-    public static final int SETTING_CODE_MENU = 104;
-    public static final int MOVEMENT_CODE_MENU = 105;
-    public static final int CALENDAR_CODE_MENU = 106;
-
 
     int steps = 0;
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
 //타이틀바 삭제
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.hide();
 
 
@@ -63,34 +64,34 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             steps = 0;
             tvStepDetector.setText(String.valueOf(steps));
         };
-        Button resetbutton = (Button)findViewById(R.id.resetbutton);
+        Button resetbutton = findViewById(R.id.resetbutton);
         resetbutton.setOnClickListener(reset);
 
 //BMI 이동
-        ImageButton bmi = (ImageButton)findViewById(R.id.BMI);
+        ImageButton bmi = findViewById(R.id.BMI);
         bmi.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),bmi.class);
-            startActivityForResult(intent,BMI_CODE_MENU);
+            startActivity(intent);
 
         });
 //setting 이동
-        ImageButton setting = (ImageButton)findViewById(R.id.setting);
+        ImageButton setting = findViewById(R.id.setting);
         setting.setOnClickListener(view -> {
             Intent Setting = new Intent(getApplicationContext(),SettingActivity.class);
-            startActivityForResult(Setting,SETTING_CODE_MENU);
+            startActivity(Setting);
         });
 
         //movement 이동
-        ImageButton movement = (ImageButton)findViewById(R.id.movement);
+        ImageButton movement = findViewById(R.id.movement);
         movement.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), Movement.class);
-            startActivityForResult(intent,MOVEMENT_CODE_MENU);
+            Intent movementintent = new Intent(getApplicationContext(), Movement.class);
+            startActivity(movementintent);
         });
 
-        ImageButton calendar = (ImageButton)findViewById(R.id.main_calendar);
+        ImageButton calendar = findViewById(R.id.main_calendar);
         calendar.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(),Calendar.class);
-            startActivityForResult(intent,CALENDAR_CODE_MENU);
+            Intent calendarintent = new Intent(getApplicationContext(),Calendar.class);
+            startActivity(calendarintent);
         });
 
 
@@ -98,24 +99,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 //버튼 토글
         ToggleButton toggleButton = findViewById(R.id.button6);
         toggleButton.setOnCheckedChangeListener(
-                new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (isChecked) {
-                            Toast.makeText(getApplicationContext(), "만보기 시작", Toast.LENGTH_SHORT).show();
-                            tvStepDetector.bringToFront();
-                             button.setOnClickListener(v -> Glide.with(imageView)
-                             .asGif()
-                             .load(R.raw.step)
-                             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-                             .into(imageView));
-                        } else {
-                            Toast.makeText(getApplicationContext(), "만보기 종료", Toast.LENGTH_SHORT).show();
-                            tvStepDetector.bringToFront();
-                            button.setOnClickListener(v -> Glide.with(imageView)
-                            .load(R.drawable.earth)
-                            .into(imageView));
-                        }
+                (buttonView, isChecked) -> {
+                    if (isChecked) {
+                        Toast.makeText(getApplicationContext(), "만보기 시작", Toast.LENGTH_SHORT).show();
+                        tvStepDetector.bringToFront();
+                         button.setOnClickListener(v -> Glide.with(imageView)
+                         .asGif()
+                         .load(R.raw.step)
+                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+                         .into(imageView));
+                    } else {
+                        Toast.makeText(getApplicationContext(), "만보기 종료", Toast.LENGTH_SHORT).show();
+                        tvStepDetector.bringToFront();
+                        button.setOnClickListener(v -> Glide.with(imageView)
+                        .load(R.drawable.earth)
+                        .into(imageView));
                     }
                 }
         );
@@ -132,11 +130,17 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
-            if (event.values[0] == 1.0f) {
+        if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
+            if(mStepDetector < 1){
+                mStepDetector = (int)event.values[0];
+            }
+            msteps = (int) event.values[0] - mStepDetector;
+            tvStepDetector.setText(Integer.toString(msteps));
+            Log.i("log: ", "New step detected by STEP_COUNTER sensor. Total step count: " + msteps);
+            /*if (event.values[0] == 1.0f) {
                 mStepDetector++;
                 tvStepDetector.setText(String.valueOf(mStepDetector));
-            }
+            }*/
         }
     }
     @Override
