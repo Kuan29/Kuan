@@ -29,6 +29,7 @@ class bmi : AppCompatActivity() {
         val heightText  : EditText= findViewById(R.id.editTextHeight)
         val weightText : EditText= findViewById(R.id.editTextWeight)
         val resultButton : Button= findViewById(R.id.RESULT)
+        val time = intent.getStringExtra("chartdate")
 
         resultButton.setOnClickListener{
             Log.d("BMI","Result버튼이 클릭되었음")
@@ -43,6 +44,7 @@ class bmi : AppCompatActivity() {
             val intent = Intent(this,bmiResultActivity::class.java)
             intent.putExtra("height",height)
             intent.putExtra("weight",weight)
+            intent.putExtra("chartdate",time)
             startActivity(intent)
         }
 

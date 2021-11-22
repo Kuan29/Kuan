@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -43,9 +44,9 @@ public class Calendar extends AppCompatActivity {
 
         //로그인 및 회원가입 엑티비티에서 이름을 받아옴
         Intent intent=getIntent();
-        String name=intent.getStringExtra("join_name");
-        final String userID=intent.getStringExtra("userID");
-        textView3.setText(name+"님의 달력 일기장");
+        String name=intent.getStringExtra("userName");
+        final String userID=intent.getStringExtra("userName");
+        textView3.setText(name+"님의 Canlendar");
 
         //타이틀바 삭제
         ActionBar actionBar = getSupportActionBar();
@@ -63,6 +64,7 @@ public class Calendar extends AppCompatActivity {
                 diaryTextView.setText(String.format("%d / %d / %d",year,month+1,dayOfMonth));
                 contextEditText.setText("");
                 checkDay(year,month,dayOfMonth,userID);
+
             }
         });
         save_Btn.setOnClickListener(new View.OnClickListener() {

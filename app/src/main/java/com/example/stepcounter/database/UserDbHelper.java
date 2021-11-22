@@ -1,15 +1,15 @@
 package com.example.stepcounter.database;
 
-import static com.example.stepcounter.database.UserContract.NewUserInfo.TABLE_NAME;
-import static com.example.stepcounter.database.UserContract.NewUserInfo.USER_NAME;
-import static com.example.stepcounter.database.UserContract.NewUserInfo.USER_PASSWORD;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import static com.example.stepcounter.database.UserContract.NewUserInfo.TABLE_NAME;
+import static com.example.stepcounter.database.UserContract.NewUserInfo.USER_NAME;
+import static com.example.stepcounter.database.UserContract.NewUserInfo.USER_PASSWORD;
 
 /**
  * Created by Admin on 09-04-2015.

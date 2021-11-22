@@ -34,7 +34,7 @@ public class CombinedChartActivity extends AppCompatActivity {
         LineChart chart = findViewById(R.id.linechart);
 
         ArrayList<Entry> values = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
 
             float val = (float) (Math.random() * 10);
             values.add(new Entry(i, (int) val));

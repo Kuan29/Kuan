@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -58,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(pwd.equals(result.getString(1))) {
                         Toast.makeText(context, "Successful Login", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("userName",name);
                         startActivity(intent);
                     }
                     else

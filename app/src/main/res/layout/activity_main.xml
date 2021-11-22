@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="87dp"
@@ -24,8 +25,8 @@
             android:id="@+id/main_calendar"
             android:layout_width="match_parent"
             android:layout_height="77dp"
-            android:contentDescription="@string/todo"
             android:layout_gravity="center"
+            android:contentDescription="@string/todo"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/lt16400639_quantized"
             tools:ignore="ContentDescription,MissingConstraints"
@@ -173,6 +174,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_settings_24"
         tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/datatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginLeft="174dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginRight="179dp"
+        android:layout_marginBottom="14dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/txttext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/txttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginLeft="174dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginRight="179dp"
+        android:layout_marginBottom="124dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/BMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datatext" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

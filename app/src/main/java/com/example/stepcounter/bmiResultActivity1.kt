@@ -1,19 +1,25 @@
 package com.example.stepcounter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.SeekBar
 import android.widget.TextView
+import com.example.stepcounter.chart.ChartDbHelper
 import kotlinx.android.synthetic.main.bmi_result_1.*
 
 
 class bmiResultActivity1 : AppCompatActivity() {
 
     private var value = 0
+    var context: Context = this
+    var chartDbHelper: ChartDbHelper? = null
+    var chartDatabase: SQLiteDatabase? = null
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,10 +37,20 @@ class bmiResultActivity1 : AppCompatActivity() {
 
         val resultStringTextView: TextView = findViewById(R.id.resultTextView2)
         resultStringTextView.text = bmiresult
+        val time = intent.getStringExtra("chartdate")
+
+
+
+
 
         graphanalysis.setOnClickListener {
+
+            chartDbHelper = ChartDbHelper(context)
+            chartDatabase = chartDbHelper!!.writableDatabase
+
             val intent = Intent(this,CombinedChartActivity::class.java)
             intent.putExtra("bmigraph1",bmigraph1)
+            intent.putExtra("chartdate",time)
             startActivity(intent)
         }
 

@@ -1,4 +1,5 @@
 package com.example.stepcounter;
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -24,8 +26,11 @@ import android.widget.ToggleButton;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
-    TextView tvStepDetector;
+    TextView tvStepDetector,DATATEST;
     private SensorManager sensorManager;
     private  Sensor stepDetectorSensor;
     private int mStepDetector;
@@ -51,6 +56,18 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         imageView.bringToFront();
 
 
+        Intent test = getIntent();
+        String nametest = test.getStringExtra("userName");
+
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat format = new SimpleDateFormat( "yyyy/M/dd");
+        String time = format.format(date);
+        DATATEST = findViewById(R.id.datatext);
+        DATATEST.setText(time);
+
+
+
 
 
 //타이틀바 삭제
@@ -71,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         ImageButton bmi = findViewById(R.id.BMI);
         bmi.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),bmi.class);
+            intent.putExtra("chartdate",time);
             startActivity(intent);
 
         });
@@ -91,10 +109,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         ImageButton calendar = findViewById(R.id.main_calendar);
         calendar.setOnClickListener(view -> {
             Intent calendarintent = new Intent(getApplicationContext(),Calendar.class);
+            calendarintent.putExtra("userName",nametest);
             startActivity(calendarintent);
         });
-
-
 
 //버튼 토글
         ToggleButton toggleButton = findViewById(R.id.button6);
@@ -164,6 +181,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         //lastTimeBackPressed에 '뒤로'버튼이 눌린 시간을 기록
         lastTimeBackPressed = System.currentTimeMillis();
     }
+
 }
 
 
