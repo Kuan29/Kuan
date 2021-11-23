@@ -3,72 +3,82 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/bg_register"
-    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="10dp">
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="65dp"
-        android:text="@string/btn_login"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/join_name"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:lineSpacingExtra="-12sp"
+        android:textColor="#2699fb"
+        android:textSize="72sp"
+        android:textStyle="normal"
+        android:text="Health \n Care"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:text="Health \n Care" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/login_username"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:layout_marginTop="100dp"
+        android:background="@color/input_register_bg"
+        android:hint="Username"
+        android:inputType="textCapWords"
+        android:padding="10dp"
+        android:textColor="@color/input_register"
+        android:textColorHint="#2699fb" />
 
-        <EditText
-            android:id="@+id/login_username"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/input_register_bg"
-            android:hint="Username"
-            android:inputType="textCapWords"
-            android:padding="10dp"
-            android:textColor="@color/input_register"
-            android:textColorHint="@color/input_register_hint" />
-        <EditText
+    <EditText
             android:id="@+id/login_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:background="@color/input_register_bg"
             android:hint="Password"
             android:inputType="textEmailAddress"
+
             android:padding="10dp"
             android:textColor="@color/input_register"
-            android:textColorHint="@color/input_register_hint" />
+            android:textColorHint="#2699fb" />
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:backgroundTint="#6c83ad"
-            android:onClick="click"
-            android:text="@string/btn_login"
-            android:textColor="#FFFF" />
 
-        <Button
-            android:id="@+id/btn_register"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dip"
-            android:backgroundTint="#6c83ad"
-            android:text="@string/btn_register"
-            android:textColor="#FFFF"
-            android:onClick="click"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="391dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dip"
+        android:backgroundTint="#2699fb"
+        android:drawableBottom="@drawable/ic_baseline_arrow_forward_24"
+        android:gravity="center"
+        android:onClick="click" />
+
+    <TextView
+        android:id="@+id/btn_register"
+        android:fontFamily="@font/arial"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="12sp"
+        android:textColor="#2699fb"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원이 아닌가요?"
+        tools:text="회원이 아닌가요?"/>
+
+
 </LinearLayout>
