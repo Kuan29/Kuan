@@ -6,12 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,8 +30,11 @@ import android.widget.ToggleButton;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
     TextView tvStepDetector,DATATEST;
@@ -43,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getHashKey();
 
         tvStepDetector = findViewById(R.id.sensor);
         sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
@@ -84,8 +92,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         Button resetbutton = findViewById(R.id.resetbutton);
         resetbutton.setOnClickListener(reset);
 
+        ImageButton mapbutton = findViewById(R.id.Mapbutton);
+        mapbutton.setOnClickListener(v -> {
+            Intent map = new Intent(getApplicationContext(), sdfsdf.class);
+            startActivity(map);
+        });
+
 //BMI 이동
         ImageButton bmi = findViewById(R.id.BMI);
+        bmi.bringToFront();
         bmi.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(),bmi.class);
             intent.putExtra("chartdate",time);
@@ -94,6 +109,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         });
 //setting 이동
         ImageButton setting = findViewById(R.id.setting);
+        setting.bringToFront();
+        setting.bringToFront();
         setting.setOnClickListener(view -> {
             Intent Setting = new Intent(getApplicationContext(),SettingActivity.class);
             startActivity(Setting);
@@ -101,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         //movement 이동
         ImageButton movement = findViewById(R.id.movement);
+        movement.bringToFront();
         movement.setOnClickListener(v -> {
             Intent movementintent = new Intent(getApplicationContext(), Movement.class);
             startActivity(movementintent);
@@ -180,6 +198,26 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         Toast.makeText(this, "'뒤로' 버튼을 한번 더 누르시면 앱이 종료됩니다.", Toast.LENGTH_SHORT).show();
         //lastTimeBackPressed에 '뒤로'버튼이 눌린 시간을 기록
         lastTimeBackPressed = System.currentTimeMillis();
+    }
+    private void getHashKey(){
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (packageInfo == null)
+            Log.e("KeyHash", "KeyHash:null");
+
+        for (Signature signature : packageInfo.signatures) {
+            try {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            } catch (NoSuchAlgorithmException e) {
+                Log.e("KeyHash", "Unable to get MessageDigest. signature=" + signature, e);
+            }
+        }
     }
 
 }

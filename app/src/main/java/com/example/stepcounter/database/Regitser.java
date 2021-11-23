@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -23,6 +24,7 @@ public class Regitser extends AppCompatActivity {
     Context context = this;
     UserDbHelper userDbHelper;
     SQLiteDatabase sqLiteDatabase;
+    TextView delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class Regitser extends AppCompatActivity {
         name = (EditText) findViewById(R.id.join_Username);
         password = (EditText) findViewById(R.id.join_password);
         register = (Button) findViewById(R.id.join_button);
+        delete = (TextView)findViewById(R.id.delete);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,13 @@ public class Regitser extends AppCompatActivity {
                 userDbHelper.close();
                 name.setText("");
                 password.setText("");
+                Intent intent = new Intent(Regitser.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(Regitser.this,LoginActivity.class);
                 startActivity(intent);
             }

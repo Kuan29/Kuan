@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d2e6ff"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
 
@@ -38,11 +38,11 @@
         android:id="@+id/resetbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#6c83ad"
+        android:backgroundTint="#2699fb"
         android:text="@string/reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.322"
@@ -52,69 +52,20 @@
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#6c83ad"
+        android:backgroundTint="#2699fb"
         android:text="@string/start"
         android:textColor="@color/btn_start"
         android:textOff="@string/start"
         android:textOn="@string/stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.322"
         tools:ignore="MissingConstraints" />
 
-    <ImageButton
-        android:id="@+id/movement"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972"
-        app:srcCompat="@drawable/dumbbell"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
 
-    <ImageButton
-        android:id="@+id/BMI"
-        android:layout_width="73dp"
-        android:layout_height="74dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
-        app:srcCompat="@drawable/bmi"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
-
-    <ImageButton
-        android:id="@+id/imageButton13"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@android:color/transparent"
-        android:padding="0dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972"
-        app:srcCompat="@drawable/map"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/stepcounter2"
@@ -157,23 +108,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.238" />
 
-    <ImageButton
-        android:id="@+id/setting"
-        android:layout_width="44dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="291dp"
-        android:backgroundTint="@color/backGround"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/stepcounter2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_settings_24"
-        tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/datatext"
@@ -184,28 +119,101 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="179dp"
         android:layout_marginRight="179dp"
-        android:layout_marginBottom="14dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/txttext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    <ImageButton
+    android:id="@+id/movement"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:layout_marginStart="49dp"
+    android:layout_marginLeft="49dp"
+    android:layout_marginEnd="59dp"
+    android:layout_marginRight="59dp"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/transparent"
+    android:contentDescription="@string/todo"
+    android:padding="0dp"
+    android:scaleType="fitXY"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/BMI"
+    app:layout_constraintStart_toEndOf="@+id/Homebutton"
+    app:srcCompat="@drawable/ic_baseline_list_24"
+    tools:ignore="MissingConstraints,VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/txttext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginLeft="174dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="179dp"
-        android:layout_marginRight="179dp"
-        android:layout_marginBottom="124dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/BMI"
+    <ImageButton
+        android:id="@+id/BMI"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Mapbutton"
+        app:layout_constraintStart_toEndOf="@+id/movement"
+        app:srcCompat="@drawable/ic_baseline_monitor_weight_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/Mapbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/todo"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/setting"
+        app:layout_constraintStart_toEndOf="@+id/BMI"
+        app:srcCompat="@drawable/ic_baseline_map_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Mapbutton"
+        app:srcCompat="@drawable/ic_baseline_settings_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+    <ImageView
+        android:id="@+id/Homebutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/movement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="415dp"
+        android:layout_height="50dp"
+        android:background="#2699fb"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datatext" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

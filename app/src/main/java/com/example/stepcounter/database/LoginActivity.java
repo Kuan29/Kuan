@@ -9,6 +9,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -21,7 +22,8 @@ import com.example.stepcounter.R;
 public class LoginActivity extends AppCompatActivity {
 
     EditText userName,userPassword;
-    Button login, register;
+    Button login;
+    TextView register1;
     UserDbHelper userDbHelper;
     SQLiteDatabase sqLiteDatabase;
     Context context = this;
@@ -36,8 +38,9 @@ public class LoginActivity extends AppCompatActivity {
 
         userName = (EditText) findViewById(R.id.login_username);
         userPassword = (EditText) findViewById(R.id.login_password);
-        register = (Button) findViewById(R.id.btn_register);
-        register.setOnClickListener(new View.OnClickListener() {
+        register1 = (TextView)findViewById(R.id.btn_register);
+
+        register1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,Regitser.class);

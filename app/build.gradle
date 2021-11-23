@@ -25,6 +25,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            universalApk false
+        }
+    }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -59,7 +69,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0-rc03'
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.0-rc03'
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:31.0.0-rc02'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
@@ -72,12 +81,11 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.android.volley:volley:1.1.1'
-  
-
-
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('libs/libDaumMapAndroid.jar')
 
 }
+
 repositories {
     mavenCentral()
 }

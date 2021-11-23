@@ -34,11 +34,20 @@ public class CombinedChartActivity extends AppCompatActivity {
         LineChart chart = findViewById(R.id.linechart);
 
         ArrayList<Entry> values = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
+            values.add(new Entry(1,25.4F));
+            values.add(new Entry(2,25.2F));
+            values.add(new Entry(3,24.9F));
+            values.add(new Entry(4,24.9F));
+            values.add(new Entry(5,24.8F));
+            values.add(new Entry(6,24.9F));
+            values.add(new Entry(7,24.7F));
+            values.add(new Entry(8,24.6F));
+            values.add(new Entry(9,24.6F));
+            values.add(new Entry(10,24.4F));
 
-            float val = (float) (Math.random() * 10);
-            values.add(new Entry(i, (int) val));
-        }
+
+
+
         LineDataSet set1;
         set1 = new LineDataSet(values, "DataSet 1");
 

@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#d2e6ff">
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:text="Health"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
+    android:background="#f1f9ff">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="199dp"
-        android:layout_height="206dp"
-        android:text="Care"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginBottom="268dp"
+        android:gravity="end"
+        android:lineSpacingExtra="-12sp"
+        android:text="Health \n Care"
+        android:textColor="#2699fb"
+        android:textSize="72sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textView22"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        tools:ignore="MissingConstraints"
+        tools:text="Health \n Care" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="287dp"
-        android:layout_height="269dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginRight="62dp"
-        android:contentDescription="@string/todo"
-        android:scaleType="fitXY"
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginRight="165dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="32sp"
+        android:text="나사렛대학교(KNU)"
+        android:textColor="#2699fb"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195"
-        app:srcCompat="@drawable/dumbbell" />
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="MissingConstraints"
+        tools:text="나사렛대학교(KNU)" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
